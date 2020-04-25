@@ -1,0 +1,98 @@
+<html><head><link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Women tester academy</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+<style>
+    h1 {
+        font-family: Lobster two, Arial, serif;
+        font-size: 50px;
+    }
+
+    body {
+        background-image: url("assets/img/pink.png");
+        color: whitesmoke;
+    }
+
+    button {
+        font-size: 24px;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        border: solid 5px whitesmoke;
+        border-radius: 50%;
+        user-focus: none;
+        margin: 100px auto 80px auto;
+
+        display: block;
+        background-color: transparent;
+        font-weight: 600;
+        -webkit-box-shadow: 0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);
+        -moz-box-shadow: 0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);
+        box-shadow: 0 8px 0 #c5376d, 0 15px 20px rgba(0, 0, 0, .35);
+        -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+        -moz-transition: -moz-box-shadow .1s ease-in-out;
+        -o-transition: -o-box-shadow .1s ease-in-out;
+        transition: box-shadow .1s ease-in-out;
+
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button:active {
+        -webkit-box-shadow: 0 0 0 #c5376d, 0 0 0 rgba(0, 0, 0, .3);
+        -moz-box-shadow: 0 0 0 #c5376d, 0 0 0 rgba(0, 0, 0, .3);
+        box-shadow: 0 0 0 #c5376d, 0 0 0 rgba(0, 0, 0, .3);
+        -webkit-transform: translate(0, 4px);
+        -moz-transform: translate(0, 4px);
+        -o-transform: translate(0, 4px);
+        transform: translate(0, 4px);
+    }
+
+</style></head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.php">WTA</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="clickmebaby.php">Click me baby</a></li><li><a href="registracia.php">Registracia</a></li><li><a href="kalkulacka.php">Kalkulacka</a></li><li><a href="odkazovac.php">Odkazovac</a></li><li><a href="cyberpunk_registration.php">Cyberpunk_registration</a></li>    </ul>
+  </div>
+</nav>
+<div class="container">
+    <h1 class="text-center">Click me baby one more time</h1>
+    <div class="row">
+        <button id="clickMe">Click me !</button>
+    </div>
+    <div class="row text-center">
+        <h1 style="font-size: 60px" id="clicks">1</h1>
+        <p class="description">klik</p>
+    </div>
+</div>
+
+
+<script>
+    var clicks = 0;
+    $(document).ready(function () {
+        $("#clickMe").click(function () {
+            $("#clicks").text(++clicks);
+            if (clicks == 1) {
+                $(".description").text("klik");
+            }
+            if (clicks == 2 || clicks == 3 || clicks == 4) {
+                $(".description").text("kliky");
+            }
+            if (clicks > 4) {
+                $(".description").text("klikov");
+            }
+        })
+    })
+</script>
+
+</body></html>
